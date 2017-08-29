@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class CatSucursal extends Model
 {
-     protected $table = 'catsucursal';
+    protected $fillable = [
+        'sucursal',
+    ];
+    protected $table = 'catsucursal';
 
 }
