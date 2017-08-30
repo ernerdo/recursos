@@ -11,6 +11,8 @@
             <ul class="sidebar-nav" id="sidebar">
                 <li><a>Colaboradores<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
                 <li><a>Reportes<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+
+
             </ul>
         </div>
 
