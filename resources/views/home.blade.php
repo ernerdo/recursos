@@ -9,8 +9,8 @@
                 <li class="sidebar-brand"><a id="menu-toggle" href="#">Menu<span id="main_icon" class="glyphicon glyphicon-align-justify"></span></a></li>
             </ul>
             <ul class="sidebar-nav" id="sidebar">
-                <li><a>test1<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-                <li><a>test2<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+                <li><a>Colaboradores<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+                <li><a>Reportes<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
             </ul>
         </div>
 
@@ -20,7 +20,7 @@
             <div class="page-content inset">
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="well lead">Cadastro de Cliente</p>
+                        <p class="well lead">Registro de Colaborador</p>
                         <div class="container">
                             <div class="row"> <!-- div da esquerda -->
                                 <!-- Text input CNPJ e Razao Social-->
@@ -28,52 +28,45 @@
                                     <form id="contact" method="post" class="form" role="form">
                                         <div class="row">
                                             <div class="col-xs-6 col-md-3 form-group">
-                                                <input class="form-control" id="inputCNPJ" name="CNPJ" placeholder="CNPJ" type="text" required autofocus />
-                                            </div>
-                                            <div class="col-xs-4 col-md-9 form-group">
-                                                <input class="form-control" id="inputrazaosocial" name="razaocosial" placeholder="Razão Social" type="text" />
+                                                <label for="">Cedula</label>
+                                                <input class="form-control" id="cedula" name="cedula" placeholder="" type="text" required autofocus />
                                             </div>
                                         </div> <!-- fim row -->
                                         <!-- Text input endereco-->
                                         <div class="col-xs-4 col-md-12 form-group">
                                             <div class="controls">
-                                                <input class="form-control" id="inputendereco" name="endereco" placeholder="Endereço"  type="text">
+                                                <label for="">Nombre Completo</label>
+                                                <input class="form-control" id="nombre" name="nombre" placeholder=""  type="text">
                                             </div>
                                         </div><!--fim control-group-->
                                         <br> <!--pulando uma linha -->
                                         <!-- Text input cidade e estado-->
                                         <div class="row">
-                                            <div class="col-xs-6 col-md-9 form-group">
-                                                <input class="form-control" id="inputcidade" name="cidade" placeholder="Cidade" type="text" />
+                                            <div class="col-xs-6 col-md-3 form-group">
+                                                <label for="">Fecha de Nacimiento</label>
+                                                <input class="form-control" id="fechanacimiento" name="fechanacimiento" placeholder="" type="date" />
                                             </div>
                                             <div class="col-xs-4 col-md-3 form-group">
-                                                <select class="form-control"id="selectbasic" name="selectestado" >
+                                              <label for="">Sucursal</label>
+                                                <select class="form-control"id="sucursal" name="sucursal" >
                                                     <option>Selecione</option>
-
-                                                    <option>TO</option>
+                                                      <option>Casa Matriz</option>
+                                                      <option>Santo Domingo</option>
+                                                      <option>Tiscapa</option>
                                                 </select>
                                             </div>
                                             <div class="col-xs-6 col-md-3 form-group">
-                                                <input class="form-control" id="inputtelefone" name="telefone" placeholder="Telefone" type="text" />
-                                            </div>
-                                            <div class="col-xs-4 col-md-3 form-group">
-                                                <input class="form-control" id="inputcontato" name="contato" placeholder="Contato" type="text" />
-                                            </div>
-                                            <div class="col-xs-4 col-md-6 form-group">
-                                                <input class="form-control" id="inputemail" name="email" placeholder="E-mail" type="text" />
+                                              <label for="">Fecha de Ingreso</label>
+                                                <input class="form-control" id="fechaingreso" name="fechaingreso" placeholder="Telefone" type="date" />
                                             </div>
                                         </div><!--fim Text input cidade e estado-->
-                                        <div class="col-xs-4 col-md-12 form-group">
-                                            <div class="controls">
-                                                <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
-                                            </div>
-                                        </div>
                                         <br />
 
                                         <div class="row">
                                             <div class="col-xs-12 col-md-12 form-group">
-                                                <button class="btn btn-primary pull-right" type="submit">Salvar</button>
-                                                <button class="btn btn-primary pull-right" type="submit">Limpar</button>
+                                                <button class="btn btn-primary pull-right" type="submit">Guardar</button>
+                                                <button class="btn btn-primary pull-right" type="submit">Agregar</button>
+
                                                 <!--<button class="btn btn-primary pull-right" type="submit">Enviar</button>-->
                                             </div>
                                         </div>

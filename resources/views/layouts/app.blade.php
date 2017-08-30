@@ -33,8 +33,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a href="{{ url('/') }}">
+                        <img class="img-responsive navbar-brand" src="{{asset('img/logo.png') }}" alt="">
                     </a>
                 </div>
 

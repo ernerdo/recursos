@@ -5,7 +5,6 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-              <img class= "img-responsive" src="http://alviacomercial.com/images/logo.png" alt="">
                 <div class="panel-heading">Iniciar Sesión</div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
