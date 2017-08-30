@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function AddEmpleado($request as )
+    public function AddEmpleado()
     {
 
     }
