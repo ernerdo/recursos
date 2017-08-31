@@ -16,9 +16,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::group(['middleware' => 'auth'], function () {
+    //catalogo
 Route::get('/home', 'HomeController@index')->name('home');
 
-//catalogo
 Route::get('/catempleado', 'AdminController@index');
 Route::post('crear_empleado', 'AdminController@crear_empleado');
 Route::get('/list', 'AdminController@listado');
+});
