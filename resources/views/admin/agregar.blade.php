@@ -63,9 +63,7 @@
                                     <div class="row">
                                         <div class="col-xs-12 col-md-12 form-group">
                                             <button class="btn btn-primary pull-right" type="submit">Guardar</button>
-                                            <button class="btn btn-primary pull-right" type="submit">Agregar</button>
 
-                                            <!--<button class="btn btn-primary pull-right" type="submit">Enviar</button>-->
                                         </div>
                                     </div>
                                 </form>

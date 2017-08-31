@@ -86,7 +86,7 @@
             </ul>
             <ul class="sidebar-nav" id="sidebar">
                 <li><a href="{{ url('/catempleado') }}">Colaboradores<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
-                <li><a>Reportes<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
+                <li><a href="{{ url('/list') }}">Reportes<span class="sub_icon glyphicon glyphicon-link"></span></a></li>
             </ul>
         </div>
         @yield('content')

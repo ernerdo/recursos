@@ -16,9 +16,9 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
 
 //catalogo
 Route::get('/catempleado', 'AdminController@index');
 Route::post('crear_empleado', 'AdminController@crear_empleado');
+Route::get('/list', 'AdminController@listado');

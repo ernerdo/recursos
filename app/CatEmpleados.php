@@ -13,11 +13,11 @@ class CatEmpleados extends Model
 
     public function sucursal()
     {
-        return $this->hasOne('App\CatSucursal');
+        return $this->hasOne('App\CatSucursal','id','catsucursal_id');
     }
     public function estado()
     {
-        return $this->hasOne('App\CatEstado');
+        return $this->hasOne('App\CatEstado','id','catestado_id');
     }
 
 

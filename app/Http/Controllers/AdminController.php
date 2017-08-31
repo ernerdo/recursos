@@ -15,7 +15,11 @@ class AdminController extends Controller
         $suc=CatSucursal::all();
         return view('admin.agregar')->with("suc",$suc);
     }
-
+    public function listado()
+    {
+        $empleados=CatEmpleados::paginate(25);
+        return view('admin.lista')->with("empleados",$empleados);
+    }
 
     public function crear_empleado(Request $request)
     {
