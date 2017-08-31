@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -93,9 +94,9 @@
 </div>
 
 <!-- Scripts -->
-
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/navbar.js') }}"></script>
+<script src="{{ asset('js/toastr.js') }}"></script>
 
 </body>
 </html>

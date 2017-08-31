@@ -18,7 +18,7 @@ class CreateCatempleadoTable extends Migration
             $table->string('nombre');
             $table->string('cedula');
             $table->date('fechaingreso');
-            $table->date('fechasalida');
+            $table->date('fechasalida')->nullable();;
             $table->date('fechacumple');
             $table->integer('catestado_id')->unsigned();
             $table->foreign('catestado_id')->references('id')->on('catestado');
