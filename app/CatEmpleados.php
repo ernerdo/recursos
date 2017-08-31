@@ -9,7 +9,7 @@ class CatEmpleados extends Model
     protected $fillable = [
         'nombre','cedula','fechaingreso','fechasalida','fechacumple','catestado_id','catsucursal_id',
     ];
-    protected $table = 'catempleados';
+    protected $table = 'catempleado';
 
     public function sucursal()
     {
