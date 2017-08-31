@@ -35,11 +35,19 @@ class AdminController extends Controller
 
         if($empleado->save())
         {
-            return view("mensajes.empleado_creado")->with("msj","Empleado agregado correctamente") ;
+            $notificacion = array(
+                'message' => 'Empleado guardado',
+                'alert-type' => 'success'
+            );
+            return back()->with($notificacion) ;
         }
         else
         {
-            return view("mensajes.mensaje_error")->with("msj","...Hubo un error al agregar ;...") ;
+            $notificacion = array(
+                'message' => 'Empleado guardado',
+                'alert-type' => 'error'
+            );
+            return back()->with($notificacion) ;
         }
 
     }
