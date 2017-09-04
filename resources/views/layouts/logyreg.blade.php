@@ -15,11 +15,12 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
     <!--<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">-->
     <style>body{
-background-color:#efefef;
-}
-</style>-->
+      background-color:#efefef;
+      margin-top: 100px
+    }
+    </style>
 
 </head>
 <body>

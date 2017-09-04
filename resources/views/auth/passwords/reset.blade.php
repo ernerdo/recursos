@@ -1,4 +1,4 @@
-@extends('layouts.appresp')
+@extends('layouts.logyreg')
 
 @section('content')
 <div class="container">
