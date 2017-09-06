@@ -21,7 +21,6 @@
       margin-top: 100px
     }
     </style>
-
 </head>
 <body>
     <header id="app">
@@ -43,6 +42,7 @@
         <div class="col-md-4 col-md-offset-4">
           <h5 class="text-center">Powered by IT Alvia Comercial &copy 2017, All rights reserved.</h5>
         </div>
+      </div>
     </footer>
 
     <!-- Scripts -->
