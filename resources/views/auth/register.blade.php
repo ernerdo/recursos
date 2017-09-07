@@ -4,13 +4,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-          <h2 class="text-center">Registrarse</h2>
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <form class="form-signin" method="POST" action="{{ route('register') }}">
+            <div class="card">
+                <h3 class="text-center">Registrarse</h3>
+                <div class="card-content">
+                    <form method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                        <div class="form-group label-floating {{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="control-label">Nombre Completo</label>
 
                             <div>
@@ -24,7 +23,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                        <div class="form-group label-floating {{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="control-label">Correo Electrónico</label>
 
                             <div>
@@ -38,7 +37,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                        <div class="form-group label-floating {{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="control-label">Contraseña</label>
 
                             <div>
@@ -52,7 +51,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group label-floating">
                             <label for="password-confirm" class="control-label">Confirmar Contraseña</label>
 
                             <div>
@@ -61,8 +60,8 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-success">
+                            <div>
+                                <button type="submit" class="btn btn-success outline btn-block">
                                     Registrar
                                 </button>
                             </div>
@@ -70,7 +69,7 @@
                     </form>
                 </div>
                 <div class="panel-footer text-center">
-                  <a class="btn btn-link" href="{{ route('login') }}">
+                  <a href="{{ route('login') }}">
                     ¿Tienes Cuenta? Inicia Sesión
                   </a>
                 </div>
