@@ -39,20 +39,20 @@
 
 		<div class="sidebar-wrapper">
 			<ul class="nav">
-				<li>
+				<li class="active">
 					<a href="{{ asset('home') }}">
 						<i class="material-icons">home</i>
 						<p>Inicio</p>
 					</a>
 				</li>
-				<li class="active">
+				<li>
 					<a href="{{ url('/catempleado') }}">
 						<i class="material-icons">people</i>
 						<p>Registrar Colaborador</p>
 					</a>
 				</li>
 				<li>
-					<a href="table.html">
+					<a href="{{ url('/list') }}">
 						<i class="material-icons">folder_shared</i>
 						<p>Lista de Colaboradores</p>
 					</a>
@@ -71,19 +71,34 @@
 	<script src="{{asset('js/material.min.js')}}" type="text/javascript"></script>
 
 
-	<!--  Notifications Plugin    -->
+	<!--  Notifications Plugin    -->>
 	<script src="{{asset('js/bootstrap-notify.js')}}"></script>
 
 	<!-- Material Dashboard javascript methods -->
 	<script src="{{asset('js/material-dashboard.js')}}"></script>
 
-	<script type="text/javascript">
-    	$(document).ready(function(){
 
-			// Javascript method's body can be found in assets/js/demos.js
-        	demo.initDashboardPageCharts();
+<script src="{{ asset('js/toastr.js') }}"></script>
+<script>
+			@if(Session::has('message'))
+    var type = "{{ Session::get('alert-type', 'info') }}";
+    switch(type){
+        case 'info':
+            toastr.info("{{ Session::get('message') }}");
+            break;
 
-    	});
-	</script>
+        case 'warning':
+            toastr.warning("{{ Session::get('message') }}");
+            break;
 
+        case 'success':
+            toastr.success("{{ Session::get('message') }}");
+            break;
+
+        case 'error':
+            toastr.error("{{ Session::get('message') }}");
+            break;
+    }
+	@endif
+</script>
 </html>

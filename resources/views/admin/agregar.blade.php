@@ -73,10 +73,8 @@
             <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="container">
-                        <div class="row"> <!-- div da esquerda -->
-                            <!-- Text input CNPJ e Razao Social-->
-                            <div class="col-sm-8 contact-form"> <!-- div da direita -->
+                    <div class="card">
+                            <div class="card-content"> <!-- div da direita -->
                                 <form id="contact" method="POST" class="form" action="{{ url('crear_empleado') }}" role="form">
                                     {{ csrf_field() }}
                                     <div class="row">
@@ -123,13 +121,13 @@
                                     </div>
                                 </form>
                             </div> <!-- fim div da direita -->
-                        </div> <!-- fim div da esquerda -->
                     </div>
 
                 </div>
             </div>
             </div>
         </div>
+
             <footer class="footer">
                 <div class="container-fluid">
                     <nav class="pull-left">
