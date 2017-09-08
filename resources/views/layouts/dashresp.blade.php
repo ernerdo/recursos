@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
 	<meta charset="utf-8" />
 	<link rel="icon" type="image/png" href="{{asset('img/logo.png') }}"/>
@@ -10,35 +10,30 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
-    <!-- Bootstrap core CSS     -->
+    <!-- Bootstrap core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
 
-    <!--  Material Dashboard CSS  -->
+    <!-- Material Dashboard CSS -->
     <link href="{{ asset('css/material-dashboard.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/toastr.css') }}" rel="stylesheet">
 
-    <!--     Fonts and icons     -->
+    <!-- Fonts and icons -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
 
-<div class="wrapper">
-	<div class="sidebar" data-color="red" data-image="{{asset('img/sidebar-4.jpg') }}">
-		<!--
-            Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+<div class="wrapper"> <!--DIV DE INICIAL-->
+    <div class="sidebar" data-color="red" data-image="{{asset('img/sidebar-4.jpg') }}"> <!--DIV DE BARRA LATERAL-->
+        <div class="logo"> <!--DIV PARA ACOMODAR LOGO EN LATERAL-->
+            <a href="{{ asset('home') }}"> <!--REDIRECCION A HOME-->
+                <img src="{{asset('img/logoalvia.png') }}" class="img-responsive" alt="">
+			</a> <!--CIERRE DE REDIRECCION A HOME-->
+		</div> <!--CIERRE DIV PARA ACOMODAR LOGO EN LATERAL-->
 
-            Tip 2: you can also add an image using data-image tag
-        -->
-
-		<div class="logo">
-			<a href="{{ asset('home') }}">
-				<img src="{{asset('img/logoalvia.png') }}" class="img-responsive" alt="">
-			</a>
-		</div>
-
-		<div class="sidebar-wrapper">
-			<ul class="nav">
+		<div class="sidebar-wrapper"> <!--DIV DE MENU LATERAL-->
+			<ul class="nav"> <!--LISTA DESORDENADA-->
 				<li class="active">
 					<a href="{{ asset('home') }}">
 						<i class="material-icons">home</i>
@@ -57,11 +52,26 @@
 						<p>Lista de Colaboradores</p>
 					</a>
 				</li>
-			</ul>
-		</div>
-	</div>
-    @yield('content')
-</div>
+			</ul> <!--CIERRE DE LISTA DESORDENADA-->
+		</div> <!--CIERRE DE DIV DE MENU LATERAL-->
+	</div> <!--CIERRE DE DIV DE BARRA LATERAL-->
+
+    <div class="main-panel"> <!--Panel Central-->
+        @yield('content') <!--Llamado a la Vista Lista y Agregar, segun click en Anchor-->
+        <footer class="footer">
+            <div class="container-fluid"> <!--DIV DE CONTENEDOR-->
+                <p class="copyright pull-right">
+                    &copy; <script>document.write(new Date().getFullYear())</script>
+                    Powered By IT
+                    <a href="http://alviacomercial.com">
+                        Alvia Comercial
+                    </a>
+                </p>
+            </div><!--CIERRE DIV DE CONTENEDOR-->
+        </footer>
+    </div><!--Cierre de Panel Central-->
+
+</div><!--CIERRE DE DIV INICIAL-->
 
 </body>
 
@@ -71,7 +81,7 @@
 	<script src="{{asset('js/material.min.js')}}" type="text/javascript"></script>
 
 
-	<!--  Notifications Plugin    -->>
+	<!--  Notifications Plugin    -->
 	<script src="{{asset('js/bootstrap-notify.js')}}"></script>
 
 	<!-- Material Dashboard javascript methods -->

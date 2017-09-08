@@ -25,32 +25,26 @@
 
     <style>body{
       background-color:#efefef;
-      margin-top: 100px;
     }
     </style>
 </head>
+
 <body>
     <header>
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-4 col-md-offset-4"> <!--DIV DE CENTRADO-->
           <a href="{{ route('login') }}">
             <img class="img-responsive center-block" style="width: 35%; height: 35%" src="{{asset('img/logo.png') }}" alt="">
           </a>
-        </div>
-      </div>
-
+        </div><!--CIERRE DE DIV DE CENTRADO-->
     </header>
 
-      @yield('content')
-
+    @yield('content')
 
     <footer>
-      <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-4 col-md-offset-4"> <!--DIV DE CENTRADO-->
           <h6 class="text-center">Powered by IT Alvia Comercial &copy 2017.</h6>
             <h6 class="text-center">All rights reserved.</h6>
-        </div>
-      </div>
+        </div><!--CIERRE DE DIV DE CENTRADO-->
     </footer>
 </body>
 <!--   Core JS Files   -->
@@ -65,13 +59,5 @@
 <!-- Material Dashboard javascript methods -->
 <script src="{{asset('js/material-dashboard.js')}}"></script>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-
-        // Javascript method's body can be found in assets/js/demos.js
-        demo.initDashboardPageCharts();
-
-    });
-</script>
 
 </html>

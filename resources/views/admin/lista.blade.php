@@ -2,7 +2,6 @@
 
 @section('content')
 
-    <div class="main-panel">
         <nav class="navbar navbar-transparent navbar-absolute">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -83,7 +82,7 @@
                             <th>Sucursal</th>
                             <th>Fecha Cumple</th>
                             <th>Estado</th>
-
+                            <th>Accion</th>
                         </tr>
                         </thead>
 
@@ -96,8 +95,21 @@
                                 <td> {{ Carbon\Carbon::parse($empleado->fechaingreso)->format('d-m-Y')}}</td>
                                 <td> {{ $empleado->sucursal->sucursal }}</td>
                                 <td> {{ Carbon\Carbon::parse($empleado->fechacumple)->format('d-m-Y')}}</td>
-                                <td> {{ $empleado->estado->estado }}</td>
-                                <td class="td-actions text-right">
+                                <td>
+                                    <?php
+                                    //{{ $empleado->estado->estado }}
+                                    switch($empleado->estado->estado){
+                                        case "Activo":
+                                            echo '<i class="material-icons btn-success">check</i>';
+                                            break;
+
+                                        case "Inactivo":
+                                            echo '<i class="material-icons btn-danger">close</i>';
+                                            break;
+                                    }
+                                    ?>
+                                </td>
+                                <td class="td-actions text-center">
                                     <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </button>
@@ -125,7 +137,5 @@
         </div>
     </div>
         </div>
-
-    </div>
 
 @endsection
