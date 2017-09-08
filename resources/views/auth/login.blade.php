@@ -5,9 +5,9 @@
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
             <div class="card">
-                <h3 class="text-center">Iniciar Sesión</h3>
                 <div class="card-content">
-                    <form method="POST" action="{{ route('login') }}">
+                    <h3 class="text-center">Iniciar Sesión</h3>
+                    <form class="form-signin" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
                         <div class="form-group label-floating {{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="control-label">Correo electrónico</label>
