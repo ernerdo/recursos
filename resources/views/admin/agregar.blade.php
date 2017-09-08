@@ -1,5 +1,7 @@
 @extends('layouts.dashresp')
-@section('pageTitle', 'Registrar Colaborador')
+
+@section('pageTitle', 'Registrar Colaborador') <!--Para colocar el titulo-->
+
 @section('content')
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -10,75 +12,60 @@
             </ul>
         </div>
     @endif
-        <!-- Keep all page content within the page-content inset div! -->
+        <!-- Contenido central para registrar un nuevo empleado -->
 
-            <nav class="navbar navbar-transparent navbar-absolute">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse">
+            <nav class="navbar navbar-transparent navbar-absolute"> <!-- Barra de navegación con funciones de menu -->
+
+                <div class="container-fluid"> <!--Contenedor ajustado de la Navbar-->
+
+                    <div class="navbar-header"> <!--Barra de Navegacion Responsive Izquierda-->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"> <!--Boton para descubrir la sidebar-->
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Registrar Colaborador</a>
-                    </div>
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a href="#pablo" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="material-icons">dashboard</i>
-                                    <p class="hidden-lg hidden-md">Dashboard</p>
-                                </a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="material-icons">notifications</i>
-                                    <span class="notification">5</span>
-                                    <p class="hidden-lg hidden-md">Notifications</p>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Mike John responded to your email</a></li>
-                                    <li><a href="#">You have 5 new tasks</a></li>
-                                    <li><a href="#">You're now friend with Andrew</a></li>
-                                    <li><a href="#">Another Notification</a></li>
-                                    <li><a href="#">Another One</a></li>
-                                </ul>
-                            </li>
+                        </button> <!--Cierre de Boton para descubrir la sidebar-->
+                        <a class="navbar-brand" href="{{ url('/catempleado') }}">Registrar Colaborador</a>
+                    </div> <!-- Cierre de Barra de Navegacion Responsive Izquierda-->
+
+                    <div class="collapse navbar-collapse"> <!--Menu para cierre de sesión-->
+                        <ul class="nav navbar-nav navbar-right"> <!--Lista para agregar mas opciones en dropdown-->
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     <i class="material-icons">person</i>
                                     {{ Auth::user()->name }}
                                 </a>
-
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
                                         <a href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
+                                           document.getElementById('logout-form').submit();">
+                                           Logout
                                         </a>
-
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
                                 </ul>
                             </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+                        </ul><!-- Cierre Lista para agregar mas opciones en dropdown-->
+
+                    </div> <!--Cierre de Menu para cierre de sesión-->
+
+                </div> <!--Cierre de Contenedor ajustado de la Navbar-->
+
+            </nav> <!--Cierre de Barra de navegación con funciones de menu-->
+
         <div class="content">
             <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 col-lg-12 col-xs-12">
                     <div class="card">
                             <div class="card-content"> <!-- div da direita -->
                                 <form id="contact" method="POST" class="form" action="{{ url('crear_empleado') }}" role="form">
                                     {{ csrf_field() }}
                                     <div class="row">
-                                        <div class="col-xs-6 col-md-3 form-group">
+                                        <div class="form-group">
                                             <label for="">Cedula</label>
                                             <input class="form-control" id="cedula" name="cedula" placeholder="" type="text" required autofocus />
                                         </div>
