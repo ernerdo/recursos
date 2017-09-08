@@ -1,5 +1,5 @@
 @extends('layouts.dashresp')
-
+@section('pageTitle', 'Lista de Colaboradores')
 @section('content')
 
         <nav class="navbar navbar-transparent navbar-absolute">
@@ -110,10 +110,10 @@
                                     ?>
                                 </td>
                                 <td class="td-actions text-center">
-                                    <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-simple btn-xs">
+                                    <button type="button" rel="tooltip" title="Editar" class="btn btn-primary btn-simple btn-xs">
                                         <i class="material-icons">edit</i>
                                     </button>
-                                    <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-simple btn-xs">
+                                    <button type="button" rel="tooltip" title="Inactivar" class="btn btn-danger btn-simple btn-xs">
                                         <i class="material-icons">close</i>
                                     </button>
                                 </td>
@@ -138,4 +138,4 @@
     </div>
         </div>
 
-@endsection
+@stop

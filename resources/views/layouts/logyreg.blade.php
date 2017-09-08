@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="{{asset('img/logo.png') }}"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Inicio de Sesión</title>
+    <title>@yield('pageTitle') - RRHH</title>
 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -31,7 +31,7 @@
 
 <body>
     <header>
-        <div class="col-md-4 col-md-offset-4"> <!--DIV DE CENTRADO-->
+        <div class="col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 col-xs-12"> <!--DIV DE CENTRADO-->
           <a href="{{ route('login') }}">
             <img class="img-responsive center-block" style="width: 35%; height: 35%" src="{{asset('img/logo.png') }}" alt="">
           </a>
@@ -41,7 +41,7 @@
     @yield('content')
 
     <footer>
-        <div class="col-md-4 col-md-offset-4"> <!--DIV DE CENTRADO-->
+        <div col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 col-xs-12> <!--DIV DE CENTRADO-->
           <h6 class="text-center">Powered by IT Alvia Comercial &copy 2017.</h6>
             <h6 class="text-center">All rights reserved.</h6>
         </div><!--CIERRE DE DIV DE CENTRADO-->

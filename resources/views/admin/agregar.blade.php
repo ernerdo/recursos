@@ -1,5 +1,5 @@
 @extends('layouts.dashresp')
-
+@section('pageTitle', 'Registrar Colaborador')
 @section('content')
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -131,4 +131,4 @@
 
 
 
-@endsection
+@stop

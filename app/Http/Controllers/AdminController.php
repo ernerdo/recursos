@@ -17,7 +17,7 @@ class AdminController extends Controller
     }
     public function listado()
     {
-        $empleados=CatEmpleados::paginate(25);
+        $empleados=CatEmpleados::paginate(10);
         return view('admin.lista')->with("empleados",$empleados);
     }
 

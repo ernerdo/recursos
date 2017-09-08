@@ -1,9 +1,10 @@
 @extends('layouts.logyreg')
 
+@section('pageTitle', 'Iniciar Sesión')
+
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 col-xs-12">
             <div class="card">
                 <div class="card-content">
                     <h3 class="text-center">Iniciar Sesión</h3>
@@ -61,5 +62,5 @@
                 </div>
             </div>
         </div>
-    </div>
-@endsection
+</div>
+@stop

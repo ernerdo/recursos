@@ -1,5 +1,5 @@
 @extends('layouts.dashresp')
-
+@section('pageTitle', 'Inicio')
 @section('content')
         <nav class="navbar navbar-transparent navbar-absolute">
             <div class="container-fluid">
@@ -80,4 +80,4 @@
 
 
 
-@endsection
+@stop

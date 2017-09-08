@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="{{asset('img/logo.png') }}"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Registro de Empleados</title>
+	<title>@yield('pageTitle') - RRHH</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -59,15 +59,13 @@
     <div class="main-panel"> <!--Panel Central-->
         @yield('content') <!--Llamado a la Vista Lista y Agregar, segun click en Anchor-->
         <footer class="footer">
-            <div class="container-fluid"> <!--DIV DE CONTENEDOR-->
-                <p class="copyright pull-right">
+                <p class="pull-right">
                     &copy; <script>document.write(new Date().getFullYear())</script>
                     Powered By IT
                     <a href="http://alviacomercial.com">
                         Alvia Comercial
                     </a>
                 </p>
-            </div><!--CIERRE DIV DE CONTENEDOR-->
         </footer>
     </div><!--Cierre de Panel Central-->
 
