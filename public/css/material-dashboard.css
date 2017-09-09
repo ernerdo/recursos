@@ -655,8 +655,7 @@ h2.title {
 }
 .main-panel > .content {
   margin-top: 70px;
-  padding: 30px 15px;
-  min-height: calc(100% - 123px);
+  min-height: calc(100% - 160px);
 }
 .main-panel > .footer {
   border-top: 1px solid #e7e7e7;
@@ -3313,7 +3312,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .navbar.navbar-transparent {
   background-color: transparent;
   box-shadow: none;
-  border-bottom: 0;
+  border-bottom: 1px solid #e7e7e7;
 }
 .navbar.navbar-transparent .logo-container .brand {
   color: #FFFFFF;
