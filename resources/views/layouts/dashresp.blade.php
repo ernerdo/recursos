@@ -25,7 +25,7 @@
 <body>
 
 <div class="wrapper"> <!--DIV DE INICIAL-->
-    <div class="sidebar" data-color="red" data-image="{{asset('img/sidebar-4.jpg') }}"> <!--DIV DE BARRA LATERAL-->
+    <div class="sidebar" data-color="blue" data-image="{{asset('img/sidebar-4.jpg') }}"> <!--DIV DE BARRA LATERAL-->
         <div class="logo"> <!--DIV PARA ACOMODAR LOGO EN LATERAL-->
             <a href="{{ asset('home') }}"> <!--REDIRECCION A HOME-->
                 <img src="{{asset('img/logoalvia.png') }}" class="img-responsive" alt="">
@@ -34,7 +34,7 @@
 
 		<div class="sidebar-wrapper"> <!--DIV DE MENU LATERAL-->
 			<ul class="nav"> <!--LISTA DESORDENADA-->
-				<li class="active">
+				<li>
 					<a href="{{ asset('home') }}">
 						<i class="material-icons">home</i>
 						<p>Inicio</p>
@@ -58,17 +58,18 @@
 
     <div class="main-panel"> <!--Panel Central-->
         @yield('content') <!--Llamado a la Vista Lista y Agregar, segun click en Anchor-->
-        <footer class="footer">
-                <p class="copyright text-center">
-                    &copy; <script>document.write(new Date().getFullYear())</script>
-                    Powered By IT
-                    <a href="http://alviacomercial.com">
-                        Alvia Comercial
-                    </a>
-                </p>
-        </footer>
+		<footer class="footer ">
+			<div class="container-fluid">
+			<p class="copyright text-center">
+				&copy; <script>document.write(new Date().getFullYear())</script>
+				Powered By IT
+				<a href="http://alviacomercial.com">
+					Alvia Comercial
+				</a>
+			</p>
+			</div>
+		</footer>
     </div><!--Cierre de Panel Central-->
-
 </div><!--CIERRE DE DIV INICIAL-->
 
 </body>
@@ -79,11 +80,15 @@
 	<script src="{{asset('js/material.min.js')}}" type="text/javascript"></script>
 
 
+
 	<!--  Notifications Plugin    -->
 	<script src="{{asset('js/bootstrap-notify.js')}}"></script>
 
 	<!-- Material Dashboard javascript methods -->
 	<script src="{{asset('js/material-dashboard.js')}}"></script>
+	<script src="{{asset('js/moment.min.js')}}"></script>
+	<script src="{{asset('js/bootstrap-datetimepicker.js')}}"></script>
+
 
 
 	<script src="{{ asset('js/toastr.js') }}"></script>
@@ -105,5 +110,23 @@
             		break;
     			}
 			@endif
+	</script>
+
+	<script>
+        $('.datepicker').datetimepicker({
+            format: 'MM/DD/YYYY',
+            icons: {
+                time: "fa fa-clock-o",
+                date: "fa fa-calendar",
+                up: "fa fa-chevron-up",
+                down: "fa fa-chevron-down",
+                previous: 'fa fa-chevron-left',
+                next: 'fa fa-chevron-right',
+                today: 'fa fa-screenshot',
+                clear: 'fa fa-trash',
+                close: 'fa fa-remove',
+                inline: true
+            }
+        });
 	</script>
 </html>
