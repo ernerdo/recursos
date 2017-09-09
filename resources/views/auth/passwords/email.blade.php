@@ -1,7 +1,8 @@
 @extends('layouts.logyreg')
 @section('pageTitle', 'Recupera Contraseña')
+
 @section('content')
-<div class="container">
+    <div class="container">
         <div class="col-md-4 col-md-offset-4">
             <div class="card">
                 <div class="card-content">
@@ -15,14 +16,14 @@
                         {{ csrf_field() }}
                         <div class="form-group label-floating{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="control-label">Correo Electrónico</label>
-                            <div class="">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
+                                <div class="">
+                                    <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
                         </div>
 
                         <div class="form-group">
@@ -36,5 +37,5 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
 @stop
