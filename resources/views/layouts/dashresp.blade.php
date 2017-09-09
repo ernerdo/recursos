@@ -59,7 +59,7 @@
     <div class="main-panel"> <!--Panel Central-->
         @yield('content') <!--Llamado a la Vista Lista y Agregar, segun click en Anchor-->
         <footer class="footer">
-                <p class="pull-right">
+                <p class="copyright text-center">
                     &copy; <script>document.write(new Date().getFullYear())</script>
                     Powered By IT
                     <a href="http://alviacomercial.com">
