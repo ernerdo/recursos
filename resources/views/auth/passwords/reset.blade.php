@@ -1,22 +1,19 @@
 @extends('layouts.logyreg')
 @section('pageTitle', 'Recupera Contraseña')
 @section('content')
-<div class="container">
+
+    <div class="container">
         <div class="col-md-4 col-md-offset-4">
             <div class="card">
                 <div class="card-content">
                     <h3 class="text-center">Recuperar Contraseña</h3>
                     <form method="POST" action="{{ route('password.request') }}">
                         {{ csrf_field() }}
-
-                        <input type="hidden" name="token" value="{{ $token }}">
-
+                        <input type="hidden" name="token" value="{{ $token }}" />
                         <div class="form-group label-floating{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="control-label">Correo Electrónico</label>
-
                             <div>
-                                <input id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}" required autofocus>
-
+                                <input id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}" required autofocus />
                                 @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -24,13 +21,10 @@
                                 @endif
                             </div>
                         </div>
-
                         <div class="form-group label-floating{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="control-label">Contraseña</label>
-
                             <div>
-                                <input id="password" type="password" class="form-control" name="password" required>
-
+                                <input id="password" type="password" class="form-control" name="password" required />
                                 @if ($errors->has('password'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password') }}</strong>
@@ -38,12 +32,10 @@
                                 @endif
                             </div>
                         </div>
-
                         <div class="form-group label-floating{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
                             <label for="password-confirm" class="control-label">Confirmar Contraseña</label>
                             <div>
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required />
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('password_confirmation') }}</strong>
@@ -53,15 +45,13 @@
                         </div>
 
                         <div class="form-group">
-                            <div>
-                                <button type="submit" class="btn btn-primary btn-block">
-                                    Recuperar Contraseña
-                                </button>
-                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Recuperar Contraseña
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
-</div>
+    </div>
 @stop
