@@ -85,9 +85,9 @@
 	<script src="{{asset('js/bootstrap-notify.js')}}"></script>
 
 	<!-- Material Dashboard javascript methods -->
-	<script src="{{asset('js/material-dashboard.js')}}"></script>
 	<script src="{{asset('js/moment.min.js')}}"></script>
 	<script src="{{asset('js/bootstrap-datetimepicker.js')}}"></script>
+	<script src="{{asset('js/material-dashboard.js')}}"></script>
 
 
 
