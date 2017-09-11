@@ -71,6 +71,7 @@
 		</footer>
     </div><!--Cierre de Panel Central-->
 </div><!--CIERRE DE DIV INICIAL-->
+<meta name="_token" content="{!! csrf_token() !!}" />
 
 </body>
 
@@ -131,10 +132,15 @@
 	</script>
 
 	<script>
-        function search() {
 
-            var _token = document.getElementsByName("_token");
-			var busqueda = document.getElementById("busqueda");
+        function search() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                }
+            })
+            var _token = $("input[name=_token]").val();
+			var busqueda = document.getElementById("busqueda").value;
             console.log(_token)
             console.log(busqueda)
             $.ajax({
@@ -142,11 +148,22 @@
                 dataType: 'json',
                 url: '{!! url('/busqueda') !!}',
                 cache: false,
-                data: {_token:document.getElementsByName("_token").value,busqueda:document.getElementById("busqueda").value},
-                contentType: false,
-                processData: false,
+                data: {busqueda:busqueda},
                 success: function(res) {
                     console.log(res)
+                    var tabla= '';
+                    for (i=0;i<res.nombre.length;i++){
+                        tabla += '<tr role="row" class="odd">';
+                        tabla += '<td align="center">'+res.nombre[i].id+'</td>';
+                        tabla += '<td align="center">'+res.nombre[i].nombre+'</td>';
+                        tabla += '<td align="center">'+res.nombre[i].cedula+'</td>';
+						tabla += '<td align="center">'+res.nombre[i].fechaingreso+'</td>';
+						tabla += '<td align="center">'+res.nombre[i].sucursal+'</td>';
+						tabla += '<td align="center">'+res.nombre[i].fechacumple+'</td>';
+						tabla += '<td align="center">'+res.nombre[i].estado+'</td>';
+                    }
+                    tabla += '</tr>';
+                    $('#tbusqueda').html(tabla)
                 }
             });
         }

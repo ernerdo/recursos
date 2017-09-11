@@ -74,7 +74,7 @@
                                                 <th class="text-center">Accion</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="tbusqueda">
                                             @foreach($empleados as $empleado)
                                             <tr role="row" class="odd">
                                                 <td align="center">{{ $empleado->id }}</td>

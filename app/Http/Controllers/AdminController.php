@@ -59,7 +59,14 @@ class AdminController extends Controller
     public function busqueda (Request $request)
     {
         $busqueda = is_null($request->busqueda) ? '%' : '%'.$request->busqueda.'%';
-        $nombre = CatEmpleados::where('name', 'LIKE', $busqueda)->get();
+        //$nombre = CatEmpleados::where('nombre', 'LIKE', $busqueda)->get();
+
+        $nombre = CatEmpleados::join('catsucursal', 'catsucursal.id', '=', 'catempleado.catsucursal_id')->
+        join('catestado', 'catestado.id', '=', 'catempleado.catestado_id')->
+        where('nombre','LIKE',$busqueda)->
+        select('catempleado.id','catempleado.nombre','catempleado.cedula','catempleado.fechaingreso','catsucursal.sucursal','catempleado.fechacumple','catestado.estado')->
+        get();
+
         return response() ->json(['nombre' => $nombre]);
     }
 
