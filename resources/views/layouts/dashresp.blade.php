@@ -161,6 +161,7 @@
 						tabla += '<td align="center">'+res.nombre[i].sucursal+'</td>';
 						tabla += '<td align="center">'+res.nombre[i].fechacumple+'</td>';
 						tabla += '<td align="center">'+res.nombre[i].estado+'</td>';
+						tabla += '<td class="td-actions text-center"> <button type="button" rel="tooltip" title="Editar" class="btn btn-primary btn-simple btn-xs"> <i class="material-icons">edit</i> </button> <button type="button" rel="tooltip" title="Inactivar" class="btn btn-danger btn-simple btn-xs"> <i class="material-icons">close</i> </button> </td>';
                     }
                     tabla += '</tr>';
                     $('#tbusqueda').html(tabla)
