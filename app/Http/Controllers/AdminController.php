@@ -56,6 +56,13 @@ class AdminController extends Controller
 
     }
 
+    public function busqueda (Request $request)
+    {
+        $search = is_null($request->search) ? '%' : '%'.$request->search.'%';
+        $nombre = CatEmpleados::where('name', 'LIKE', $search)->get();
+        return response() ->json(['nombre' => $nombre]);
+    }
+
 
 
 }

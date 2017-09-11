@@ -35,8 +35,9 @@
                     </li>
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
+                    {{ csrf_field() }}
                     <div class="form-group form-search is-empty">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" class="form-control" placeholder="Buscar">
                         <span class="material-input"></span>
                         <span class="material-input"></span><span class="material-input"></span></div>
                     <button type="submit" class="btn btn-white btn-round btn-just-icon">
@@ -63,26 +64,26 @@
                                     <table class="table  table-hover table-striped"  cellspacing="0" width="100%">
                                         <thead class="text-danger" >
                                             <tr>
-                                                <th>codigo</th>
-                                                <th>Nombre</th>
-                                                <th>Cedula</th>
-                                                <th>Fecha Ingreso</th>
-                                                <th>Sucursal</th>
-                                                <th>Fecha Cumple</th>
-                                                <th>Estado</th>
-                                                <th>Accion</th>
+                                                <th class="text-center">codigo</th>
+                                                <th class="text-center">Nombre</th>
+                                                <th class="text-center">Cedula</th>
+                                                <th class="text-center">Fecha Ingreso</th>
+                                                <th class="text-center">Sucursal</th>
+                                                <th class="text-center">Fecha Cumple</th>
+                                                <th class="text-center">Estado</th>
+                                                <th class="text-center">Accion</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach($empleados as $empleado)
                                             <tr role="row" class="odd">
-                                                <td>{{ $empleado->id }}</td>
-                                                <td>{{ $empleado->nombre }}</td>
-                                                <td>{{ $empleado->cedula }}</td>
-                                                <td> {{ Carbon\Carbon::parse($empleado->fechaingreso)->format('d-m-Y')}}</td>
-                                                <td> {{ $empleado->sucursal->sucursal }}</td>
-                                                <td> {{ Carbon\Carbon::parse($empleado->fechacumple)->format('d-m-Y')}}</td>
-                                                <td>
+                                                <td align="center">{{ $empleado->id }}</td>
+                                                <td align="center">{{ $empleado->nombre }}</td>
+                                                <td align="center">{{ $empleado->cedula }}</td>
+                                                <td align="center"> {{ Carbon\Carbon::parse($empleado->fechaingreso)->format('d-m-Y')}}</td>
+                                                <td align="center"> {{ $empleado->sucursal->sucursal }}</td>
+                                                <td align="center"> {{ Carbon\Carbon::parse($empleado->fechacumple)->format('d-m-Y')}}</td>
+                                                <td align="center">
                                                     <?php
                                                         //{{ $empleado->estado->estado }}
                                                         switch($empleado->estado->estado){
