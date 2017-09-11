@@ -74,7 +74,7 @@
                                 </div>
                                 <div class="form-group label-floating">
                                     <label class="label-control" >Fecha de Nacimiento</label>
-                                    <input class="form-control" id="fechanacimiento" name="fechanacimiento" type="date" required />
+                                    <input class="form-control datepicker" id="fechanacimiento" name="fechanacimiento" required />
                                 </div>
                                 <div class="form-group label-floating">
                                     <label class="control-label" for="sucursal-id">Sucursal</label>
@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="form-group label-floating">
                                     <label class="label-control">Fecha de Ingreso</label>
-                                    <input class="form-control datepicker" id="fechaingreso" name="fechaingreso" type="date" required />
+                                    <input class="form-control datepicker" id="fechaingreso" name="fechaingreso" required />
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-12 col-md-12 form-group">
