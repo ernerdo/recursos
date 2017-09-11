@@ -23,4 +23,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/catempleado', 'AdminController@index');
 Route::post('crear_empleado', 'AdminController@crear_empleado');
 Route::get('/list', 'AdminController@listado');
+Route::get('/busqueda', 'AdminController@busqueda');
 });

@@ -34,10 +34,10 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-right" role="search">
+                <form class="navbar-form navbar-right" role="search" id="formsearch" action="JavaScript:search();" method="GET">
                     {{ csrf_field() }}
                     <div class="form-group form-search is-empty">
-                        <input type="text" class="form-control" placeholder="Buscar">
+                        <input type="text" class="form-control" placeholder="Buscar" id="busqueda">
                         <span class="material-input"></span>
                         <span class="material-input"></span><span class="material-input"></span></div>
                     <button type="submit" class="btn btn-white btn-round btn-just-icon">

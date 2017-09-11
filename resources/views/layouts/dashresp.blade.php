@@ -129,4 +129,26 @@
             }
         });
 	</script>
+
+	<script>
+        function search() {
+
+            var _token = document.getElementsByName("_token");
+			var busqueda = document.getElementById("busqueda");
+            console.log(_token)
+            console.log(busqueda)
+            $.ajax({
+                type: "GET",
+                dataType: 'json',
+                url: '{!! url('/busqueda') !!}',
+                cache: false,
+                data: {_token:document.getElementsByName("_token").value,busqueda:document.getElementById("busqueda").value},
+                contentType: false,
+                processData: false,
+                success: function(res) {
+                    console.log(res)
+                }
+            });
+        }
+	</script>
 </html>
