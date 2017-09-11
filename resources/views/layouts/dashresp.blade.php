@@ -160,7 +160,14 @@
 						tabla += '<td align="center">'+res.nombre[i].fechaingreso+'</td>';
 						tabla += '<td align="center">'+res.nombre[i].sucursal+'</td>';
 						tabla += '<td align="center">'+res.nombre[i].fechacumple+'</td>';
-						tabla += '<td align="center">'+res.nombre[i].estado+'</td>';
+						switch (res.nombre[i].estado){
+						    case "Activo":
+                            	tabla += '<td><i class="material-icons btn-success">check</i></td>';
+						        break;
+							case "Inactivo":
+                                tabla += '<td><i class="material-icons btn-danger">close</i></td>';
+							    break;
+						}
 						tabla += '<td class="td-actions text-center"> <button type="button" rel="tooltip" title="Editar" class="btn btn-primary btn-simple btn-xs"> <i class="material-icons">edit</i> </button> <button type="button" rel="tooltip" title="Inactivar" class="btn btn-danger btn-simple btn-xs"> <i class="material-icons">close</i> </button> </td>';
                     }
                     tabla += '</tr>';
