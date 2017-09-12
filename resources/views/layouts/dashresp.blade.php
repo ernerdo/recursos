@@ -9,7 +9,7 @@
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-
+	<meta name="_token" content="{!! csrf_token() !!}" />
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" />
 
@@ -71,9 +71,6 @@
 		</footer>
     </div><!--Cierre de Panel Central-->
 </div><!--CIERRE DE DIV INICIAL-->
-<meta name="_token" content="{!! csrf_token() !!}" />
-
-</body>
 
 	<!--   Core JS Files   -->
 	<script src="{{asset('js/jquery-3.1.0.min.js')}}" type="text/javascript"></script>
@@ -176,4 +173,5 @@
             });
         }
 	</script>
+</body>
 </html>
