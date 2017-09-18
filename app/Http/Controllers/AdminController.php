@@ -48,7 +48,7 @@ class AdminController extends Controller
         else
         {
             $notificacion = array(
-                'message' => 'Empleado guardado',
+                'message' => 'ocurrio un error',
                 'alert-type' => 'error'
             );
             return back()->with($notificacion) ;
